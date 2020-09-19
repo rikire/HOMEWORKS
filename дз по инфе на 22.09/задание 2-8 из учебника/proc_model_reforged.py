@@ -21,7 +21,7 @@ def is_valid(s):
     if s[1] not in '0123':
         raise BAD_REGISTER()
 
-    if s[1] == '1' and s[2] not in '0123456789ABCDF':
+    if s[1] == '1' and s[2] not in '0123456789A':
         raise BAD_COMMAND()
 
     elif s[2] not in '0123':
