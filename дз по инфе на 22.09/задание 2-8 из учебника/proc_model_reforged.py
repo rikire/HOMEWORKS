@@ -15,13 +15,13 @@ def is_valid(s):
     if len(s) != 3:
         raise BAD_COMMAND()
 
-    if s[0] not in '0123456789ABCD':
+    if s[0] not in '0123456789A':
         raise BAD_COMMAND()
 
     if s[1] not in '0123':
         raise BAD_REGISTER()
 
-    if s[1] == '1' and s[2] not in '0123456789A':
+    if s[1] == '1' and s[2] not in '0123456789ABCDEF':
         raise BAD_COMMAND()
 
     elif s[2] not in '0123':
