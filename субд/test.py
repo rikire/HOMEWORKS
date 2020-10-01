@@ -11,7 +11,7 @@ s = DBMS('DATA.json')
 # s.insert('AD', "AD", '14.03.1921')
 # s.insert('Ad', "Aa", '14.03.1921')
 
-#s.sort_by_fields(True,True)
-#s.show()
+s.sort_by_keys()
+s.show()
 
 s.help()

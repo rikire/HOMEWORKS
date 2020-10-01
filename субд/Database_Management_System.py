@@ -3,19 +3,48 @@ from datetime import datetime
 
 
 def do_help():
-    print('')
+    print('insert(self, name, second_name, birthday) - вставка элемента\ndel_elem(self, id) - удаление '
+          'элемента\nremake_field(self, id, name=None, second_name=None, birthday=None) - изменение поля '
+          'элемента\nsort_by_fields(self, first=False, second=False, birth=False) - сортировка по '
+          'полям\nsort_by_keys(self) - сортировка по ID\nshow(self, id=None) - вывод по ID (если None - то выводит все)')
 
 
-def is_valid(f_name):
+def is_good_args(first, second, birthday):
+    if isinstance(first, bool):
+        if isinstance(second, bool):
+            if isinstance(birthday, bool):
+                return
+    raise Exception('Args may be True or False')
+
+
+def is_valid_name(name):
+    for i in name:
+        if not i.isalpha():
+            raise Exception('Not pravilnoe name')
+
+
+def is_valid_second_name(second_name):
+    for i in second_name:
+        if not i.isalpha():
+            raise Exception('Not pravilnoe second_name')
+
+
+def is_valid_birthday(birthday):
+    try:
+        datetime.strptime(birthday, '%d.%m.%Y')
+    except:
+        raise Exception('Not pravilnoe birthday')
+
+
+def is_valid_file(f_name):
     with open(f_name, 'r') as inf:
         s = json.load(inf)
         if isinstance(s, dict):
             for i in s:
                 if len(s[i]) != 3:
-                    return False
-            return True
+                    raise Exception('Not pravilniy file')
         else:
-            return False
+            raise Exception('Not pravilniy file')
 
 
 def search_id(s):
@@ -34,31 +63,23 @@ def search_id(s):
 class DBMS:
 
     def __init__(self, f_name):
-        if is_valid(f_name):
-            self.f_name = f_name
-        else:
-            raise Exception('Chto-to ne tak with format of file')
-
+        is_valid_file(f_name)
+        self.f_name = f_name
 
     def help(self):
         do_help()
 
-
     def insert(self, name, second_name, birthday):
         with open(self.f_name, 'r') as inf:
             s = json.load(inf)
-            for i in name:
-                if not i.isalpha():
-                    raise Exception('Not pravilnoe name')
-            for i in second_name:
-                if not i.isalpha():
-                    raise Exception('Not pravilnoe second_name')
-            try:
-                is_valid_birthday = datetime.strptime(birthday, '%d.%m.%Y')
-            except:
-                raise Exception('Not pravilnoe birthday')
+
+            is_valid_name(name)
+            is_valid_second_name(second_name)
+            is_valid_birthday(birthday)
+
             id = search_id(s)
             s[id] = [name, second_name, birthday]
+
         with open(self.f_name, 'w') as outf:
             json.dump(s, outf)
 
@@ -72,14 +93,30 @@ class DBMS:
     def remake_field(self, id, name=None, second_name=None, birthday=None):
         with open(self.f_name, 'r') as inf:
             s = json.load(inf)
-            name = s[id][0] if name is None else name
-            second_name = s[id][1] if second_name is None else second_name
-            birthday = s[id][2] if birthday is None else birthday
+
+            if name is not None:
+                is_valid_name(name)
+            else:
+                name = s[id][0]
+
+            if second_name is not None:
+                is_valid_second_name(second_name)
+            else:
+                second_name = s[id][1]
+
+            if birthday is not None:
+                is_valid_birthday(birthday)
+            else:
+                birthday = s[id][2]
+
             s[id] = [name, second_name, birthday]
         with open(self.f_name, 'w') as outf:
             json.dump(s, outf)
 
-    def sort_by_fields(self, first=False,second=False,birth=False):
+    def sort_by_fields(self, first=False, second=False, birth=False):
+
+        is_good_args(first, second, birth)
+
         with open(self.f_name, 'r') as inf:
             s = json.load(inf)
             s_temp = []
@@ -87,11 +124,12 @@ class DBMS:
                 s_temp.append([i] + s[i])
 
             if birth:
-                s_temp = sorted(s_temp,key=lambda f: f[3].upper())
+                s_temp = sorted(s_temp, key=lambda f: f[3].upper())
             if second:
                 s_temp = sorted(s_temp, key=lambda f: f[2].upper())
             if first:
-                s_temp = sorted(s_temp,key=lambda f: f[1].upper())
+                s_temp = sorted(s_temp, key=lambda f: f[1].upper())
+
             s = {}
             for i in s_temp:
                 s[i[0]] = i[1:]
