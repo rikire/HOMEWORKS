@@ -1,0 +1,1 @@
+Запускать надо proc_model_reforged
