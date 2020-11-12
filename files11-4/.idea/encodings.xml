@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/CSS/cats.htm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/DIV/informer.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/IMG/img.htm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MEDIA/media.htm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SCRIPT/valaam.htm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/TABLE/table.htm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anchors.htm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dogs.htm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lists.htm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/text.htm" charset="UTF-8" />
+  </component>
+</project>
