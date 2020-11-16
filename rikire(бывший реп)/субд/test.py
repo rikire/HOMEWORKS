@@ -1,17 +1,7 @@
-from Database_Management_System import DBMS
-
-s = DBMS('DATA.json')
-#
-# s.insert('AB', "AB", '12.03.1921')
-# s.insert('AB', "AC", '13.03.1921')
-#
-# s.insert('AC', "AC", '12.03.1921')
-# s.insert('AC', "AD", '13.03.1921')
-#
-# s.insert('AD', "AD", '14.03.1921')
-# s.insert('Ad', "Aa", '14.03.1921')
-
-s.sort_by_keys()
-s.show()
-
-s.help()
+s = '5'*62
+while '333' in s or '555' in s:
+    if '555' in s:
+        s = s.replace('555', '3', 1)
+    else:
+        s = s.replace('333', '5', 1)
+print(s)
