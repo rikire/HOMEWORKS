@@ -1,0 +1,39 @@
+body{
+	background: #FFEEEE;
+	font-family: Georgia;
+}
+h1, h2{
+	font-family: Arial;
+}
+h1{
+	background:url('./images/cat.png');
+	background-size: contain; 
+}
+h2{
+	color: #800000;
+}
+.latin{
+	font-style:italic;
+	color:red;
+}
+p{
+	text-indent: 30px;
+}
+.author{
+	font-style: italic;
+	text-indent: 0px;
+}
+.quote{
+	background: #FEFEE2;
+	text-indent: 0px;
+	width: 50%;
+	padding-top: 0px;
+	padding-left: 30px;
+	padding-bottom: 10px;
+	border-width: 1px;
+	border:dotted;
+	border-spacing: 10px;
+}
+.author:hover{
+	color: red;
+}

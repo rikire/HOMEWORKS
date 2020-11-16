@@ -1,0 +1,19 @@
+.body{
+	background: #4b4a45;
+	color: white;
+}
+.header2{
+	color:#EEDFAC;
+	background: black;
+	padding: 5px;
+}
+.definition{
+	border: 1px solid;
+	padding: 10px;
+
+}
+.formula{
+	text-align: center;
+	font-weight:bold;
+	font-style: italic;
+}
