@@ -1,0 +1,40 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+#header{
+	height: 80px;
+	background: url("./images/header.jpg") no-repeat;
+}
+.ozero{
+	margin-left: 25%;
+}
+#content{
+	margin-left: 140px;
+	margin-right: 220px;
+
+}
+#content p{
+	margin: 5px;
+	text-indent: 20px;
+}
+.wiki{
+	text-align: right;
+}
+#pogoda{
+	width: 140px;
+	margin-left: 10px;
+	float:left;
+}
+#photo{
+	width: 220px;
+	margin-left: 10px;
+	float:right;
+}
+#footer{
+	background-color: #CCCCCC;
+	padding-top:5px;
+	padding-bottom: 10px;
+	text-align: center;
+	clear: both;
+}
