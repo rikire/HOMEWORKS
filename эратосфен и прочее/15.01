@@ -1,0 +1,62 @@
+#include <iostream>
+#include <vector>
+#include <sstream>
+#include <string>
+using namespace std;
+
+class Long_number{
+private:
+    vector <int> v;
+    const int D = 1000000; //система счисления
+    const int C = 5; // кол-во разрядов
+public:
+
+    vector <int> get(){
+        return v;
+    }
+
+    void operator=(string right){
+        v.clear();
+        int len = right.size();
+
+        if(len%6!=0){
+            string t(6 - len%6, '0');
+            right = t + right;
+            len += 6 - len%6;
+        }
+
+        for(int k=0; k<len/6;k++){
+            v.push_back(0);
+            istringstream istr(right.substr(k*6, 6));
+            int number;
+            istr >> number;
+            v[k] += number;
+        }
+
+    }
+
+    void operator=(Long_number& right){
+        this->v = right.get();
+    }
+
+    void add(string number){
+
+    }
+
+    void print(){
+        for(int i=0;i<v.size();i++){
+            cout<<v[i];
+        }
+    }
+};
+
+int main()
+{
+    Long_number numb;
+    numb = "1234567890098765432100000";
+
+    Long_number numb2;
+    numb2 = numb;
+
+    numb2.print();
+}
