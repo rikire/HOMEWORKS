@@ -8,8 +8,9 @@
 20) 29
 21) 27 30
 23) 32
-https://kpolyakov.spb.ru/cms/files/ege-sym/24-j7.txt
-24)
-https://kpolyakov.spb.ru/cms/files/ege-sort/26-s1.txt
-https://kpolyakov.spb.ru/cms/files/ege-stream/7/27-7a.txt
-https://kpolyakov.spb.ru/cms/files/ege-stream/7/27-7b.txt
+24) 18
+25) [103, 10609, 1092727] 112550881
+    [107, 11449, 1225043] 131079601
+    [109, 11881, 1295029] 141158161
+26) 464632 602
+27) 692286 952567
