@@ -8,4 +8,7 @@
 20) 4 7
 21) 8
 23) 14
-24) 
+24) https://kpolyakov.spb.ru/cms/files/ege-sym/24-s2.txt
+26)https://kpolyakov.spb.ru/cms/files/ege-sort/26-j7.txt
+27)https://kpolyakov.spb.ru/cms/files/ege-stream/27/27-27a.txt
+https://kpolyakov.spb.ru/cms/files/ege-stream/27/27-27b.txt
