@@ -1,4 +1,4 @@
-﻿Вариант 1
+Вариант 1
 
 12) 722
 15) 21
@@ -8,7 +8,7 @@
 20) 4 7
 21) 8
 23) 14
-24) https://kpolyakov.spb.ru/cms/files/ege-sym/24-s2.txt
-26)https://kpolyakov.spb.ru/cms/files/ege-sort/26-j7.txt
-27)https://kpolyakov.spb.ru/cms/files/ege-stream/27/27-27a.txt
-https://kpolyakov.spb.ru/cms/files/ege-stream/27/27-27b.txt
+24) С 76
+25) 287300
+26) 143518 4
+27) 11828 41262097
